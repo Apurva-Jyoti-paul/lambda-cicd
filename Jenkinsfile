@@ -34,7 +34,7 @@ pipeline {
   aws lambda create-function --function-name hello --zip-file fileb://function.zip --runtime nodejs16.x --role arn:aws:iam::940621196142:role/service-role/mailer-role-9lpvyo4c --handler index.handler
   '''
   }
-  catch
+  catch(e)
   {
     sh'''
     aws lambda update-function-code --function-name hello --zip-file fileb://function.zip
