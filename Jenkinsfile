@@ -30,7 +30,7 @@ pipeline {
       script{
   withAWS(credentials:'aws-key',region:'us-east-1'){
   try{
-  sh '''
+  sh ''' 
   aws lambda create-function --function-name hello --zip-file fileb://function.zip --runtime nodejs16.x --role arn:aws:iam::940621196142:role/service-role/mailer-role-9lpvyo4c --handler index.handler
   '''
   }
