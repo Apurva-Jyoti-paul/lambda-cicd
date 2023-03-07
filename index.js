@@ -10,7 +10,7 @@ exports.handler = async event => {
         },
         Message: {
             Body: {
-                Html: { Data: "Apuuuurva" }
+                Html: { Data: "Apuxuuurva" }
             },
             Subject: {
                 Data: event.subject
